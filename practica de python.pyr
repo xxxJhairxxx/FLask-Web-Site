@@ -1,0 +1,44 @@
+from os import system
+
+message = """
+        *** MENU ***
+    1. OPCION 1
+    2. OPCION 2
+    3. OPCION 3
+    4. OPCION 4
+    5. SALIR
+
+    ELIJA UNA OPCIÓN : """
+
+option = 0
+rpt = 'Y'
+
+while rpt == 'Y':
+
+    option = int(input(message))
+
+    system("cls")
+
+    if option == 1 :
+        print('eligio la opcion 1')
+    if option == 2 :
+        print('eligio la opcion 2')
+    if option == 3 :
+        print('eligio la opcion 3')
+    if option == 4 :
+        print('eligio la opcion 4')
+    if option == 5 :
+        break
+    if option>=6 or option<=0 :
+        print("Elija una opcion correcta")
+
+    while(True):
+        rpt =input(("desea Elegir otra opcion? Y/N :"))
+        if rpt=='N' or rpt=='n' :
+            break
+        elif rpt=='Y' or rpt=='y' :
+            system("cls")
+            rpt='Y'
+            break
+        else :
+            print("Elija una opcion correcta")
